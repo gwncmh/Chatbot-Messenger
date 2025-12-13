@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+
+# Test files
+test0.py
+test_loading.py
+app.py
+
+# ChromaDB
+chroma_db/
+
+# User data (sensitive)
+data/user_data/
+data/audio/
+
+# Streamlit
+.streamlit/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# API Keys (if any separate file)
+.env
+*.env
+
+# Logs
+*.log
+
+# Datasets (too large for GitHub)
+# Uncomment if you want to exclude large datasets
+# data/grammar/*.json
+# data/exercise/*.json
+# data/vocab/*.json
