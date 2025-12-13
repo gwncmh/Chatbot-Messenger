@@ -5,8 +5,8 @@ Description: Multi-Agent AI system for English learning with RAG
 
 ## Team
 1. Chung Thị Mai Anh 23021460
-2. Nguyễn Công Mạnh Hùng 
-3. Phạm Công Khanh
+2. Nguyễn Công Mạnh Hùng 23021567
+3. Phạm Công Khanh 23021596
 
 ## ✨ Features
 
@@ -79,10 +79,9 @@ User Input
 [Final Response Generation] ← LLM Call 2
     ↓
 User Output
-
+```
 
 #### Video demo: https://drive.google.com/drive/folders/14p1-BSAr1ICtSvxSrUntvU80vdQOJmbR?lfhs=2
-- 
 
 ## 🚀 Installation
 
