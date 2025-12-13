@@ -34,14 +34,6 @@ Description: Multi-Agent AI system for English learning with RAG
 - Vision-Language Models
 - Input Sanitization
 
-## Công nghệ sử dụng
-
-- **LLM:** Google Gemini 2.5
-- **Vector DB:** ChromaDB
-- **Embeddings:** sentence-transformers (all-MiniLM-L6-v2)
-- **Framework:** Streamlit
-- **External APIs:** Free Dictionary API
-
 ## Patterns đã áp dụng
 
 1. **Routing Pattern** - Phân loại ý định người dùng
