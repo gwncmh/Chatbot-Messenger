@@ -34,13 +34,42 @@ Description: Multi-Agent AI system for English learning with RAG
 - Vision-Language Models
 - Input Sanitization
 
-## Patterns đã áp dụng
+## 🎨 Design Patterns Implemented
 
-1. **Routing Pattern** - Phân loại ý định người dùng
-2. **Tool Use Pattern** - Sử dụng các công cụ phù hợp
-3. **RAG Pattern** - Truy xuất kiến thức từ vector database
-4. **Chain-of-Thought** - Suy luận từng bước
-5. **Reflection Pattern** - Tự đánh giá trước khi trả lời
+### 1. **Multi-Agent Pattern**
+- 4 specialized agents: `GrammarExpertAgent`, `VocabularyExpertAgent`, `ConversationPartnerAgent`, `ExerciseGeneratorAgent`
+- Smart routing based on query keywords
+- Each agent has domain-specific system prompts
+
+### 2. **RAG (Retrieval-Augmented Generation)**
+- Semantic search with ChromaDB vector database
+- Reranking with keyword matching
+- 14,935 documents indexed from external sources
+
+### 3. **Reflection Pattern**
+- Self-critique mechanism for response quality
+- Confidence scoring (0.0-1.0)
+- Automatic improvement when confidence < 70%
+
+### 4. **Tool Use Pattern**
+- RAG as external knowledge tool
+- Vision API for image analysis
+- TTS engine for pronunciation
+
+### 5. **Workflow Patterns**
+- **Routing**: Query → Agent Router → Specialized Agent
+- **Sequential**: RAG Search → Agent Processing → Reflection → Response
+- **Parallel**: Multiple data sources loaded simultaneously
+
+### 6. **Security Patterns**
+- Input sanitization against prompt injection
+- File upload validation (size, type)
+- Dangerous pattern detection (regex-based)
+
+### 7. **State Management**
+- Conversation history tracking (6 messages context window)
+- Progress persistence (JSON-based storage)
+- Session state for UI reactivity
 
 ## 📊 Dataset Statistics
 
