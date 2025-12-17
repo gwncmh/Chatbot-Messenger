@@ -37,7 +37,7 @@ def initialize_rag():
 
 def initialize_gemini():
     """Initialize Gemini model"""
-    api_key = "AIzaSyC0G7aHcFEO212EFQLMk1bN6MlnxeIUYtU"
+    api_key = "AIzaSyC8RvfBOHhqj93esQ0pvqun74l8ertYVnw"
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel('gemini-2.5-flash')
     return model
@@ -92,11 +92,11 @@ if "tts_enabled" not in st.session_state:
 
 # ==================== SIDEBAR ====================
 with st.sidebar:
-    st.title("⚙️ Settings")
+    st.title("⚙️ Cài đặt")
     
     # TTS Toggle
     st.session_state.tts_enabled = st.checkbox(
-        "🔊 Đọc chữ",
+        "Đọc chữ",
         value=st.session_state.tts_enabled
     )
 
@@ -110,7 +110,7 @@ with st.sidebar:
         st.session_state.use_reflection = False
     
     st.session_state.use_reflection = st.checkbox(
-        "🤔 Tự đánh giá câu trả lời",
+        "Tự đánh giá câu trả lời",
         value=st.session_state.use_reflection,
         help="Agent will self-critique and improve responses (slower but better)"
     )
@@ -118,7 +118,7 @@ with st.sidebar:
     st.divider()
     
     # Progress Summary
-    st.subheader("📊 Your Progress")
+    st.subheader("📊 Tiến trình của bạn")
     progress_summary = st.session_state.progress_tracker.get_summary()
     
     col1, col2 = st.columns(2)
@@ -137,7 +137,7 @@ with st.sidebar:
     st.divider()
     
     # Recommendations
-    if st.button("💡 Đề xuất"):
+    if st.button("Đề xuất"):
         recommendations = st.session_state.progress_tracker.get_recommendations()
         
         st.subheader("📚 Đã đề xuất")
@@ -171,7 +171,7 @@ with st.sidebar:
         st.rerun()
         
     # Force reload database
-    if st.button("🔄 Tải lại cơ sở dữ liệu", help="Delete and reload all data (takes ~60 min)"):
+    if st.button("Tải lại cơ sở dữ liệu", help="Delete and reload all data (takes ~60 min)"):
         import shutil
         
         # Delete persistent ChromaDB
@@ -187,8 +187,6 @@ with st.sidebar:
     # About
     st.divider()
     st.caption("Version 2.0")
-    st.caption("🤖 Powered by: Google Gemini 1.5 Flash, ChromaDB, gTTS")
-
 
 # ==================== MAIN CHAT INTERFACE ====================
 st.title("📚 English Tutor AI")
@@ -206,7 +204,7 @@ for message in st.session_state.messages:
 
 # ==================== CHAT INPUT ====================
 # ==================== IMAGE UPLOAD (VISION) ====================
-st.subheader("📷 Tải ảnh lên phân tích")
+st.subheader("Tải ảnh lên phân tích")
 
 uploaded_image = st.file_uploader(
     "Tải ảnh chữ lên phân tích",
